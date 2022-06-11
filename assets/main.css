@@ -107,7 +107,7 @@ input[type='radio']:before {
   font-size: .8rem;
 }
 
-input[type='radio']:hover::before {
+input[type='radio']:checked::before {
   background: hsl(186, 14%, 43%);
   cursor: pointer;
 }
