@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  background: hsl(185, 41%, 84%);
+  height: 100%;
+  position: relative;
+}
+
+.__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+
+.tip__card {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: 15px;
+  background: hsl(0, 0%, 100%);
+  padding: 30px;
+  border-radius: 25px;
+}
+
+.__calculator {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.__bill {
+  position: relative;
+}
+
+.bill__text,
+.tip__text {
+  padding-bottom: 5px;
+  color: hsl(186, 14%, 43%);
+}
+
+.__bill svg,
+.__people label svg {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  left: 10px;
+}
+
+.__bill svg path,
+.__people label svg path {
+  fill: hsl(184, 14%, 56%);
+}
+
+.__bill input,
+.__people label input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  background: hsl(189, 41%, 97%);
+  color: hsl(184, 14%, 56%);
+  text-align: right;
+}
+
+.__bill input::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+.__percentages .__percentage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.__percentage label:not(:last-child) {
+  width: 70px;
+  padding: 5px 10px;
+  text-align: center;
+  background: hsl(183, 100%, 15%);
+  border-radius: 5px;
+  font-size: .8rem;
+  /* margin-top: 10px; */
+}
+
+.__percentage label:not(:last-child):hover {
+  background: hsl(186, 14%, 43%);
+  cursor: pointer;
+}
+
+.__percentage label span {
+  color: hsl(0, 0%, 100%);
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+.custom__percentage input {
+  width: 70px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: .6rem;
+  font-weight: 700;
+  background: hsl(189, 41%, 97%);
+  color: hsl(184, 14%, 56%);
+  text-align: center;
+}
+
+.__people label {
+  position: relative;
+}
+
+.people__text {
+  color: hsl(186, 14%, 43%);
+}
+
+.result__card {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  background-color: hsl(183, 100%, 15%);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.__results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tip__amount__text p,
+.__total p {
+  font-size: .7rem;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: -7px;
+}
+
+.tip__amount__text span,
+.__total span {
+  font-size: .6rem;
+  color: hsl(184, 14%, 56%);
+}
+
+.result__one,
+.result__two {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.total__amount,
+.tip__amount {
+  font-size: 1.3rem;
+  color: hsl(184, 14%, 56%);
+}
+
+.__reset {
+  width: 100%;
+}
+
+.__reset button {
+  width: 100%;
+  padding: 7px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background: hsl(186, 14%, 43%);
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+}
+
+@media (max-width: 850px) {
+  .__container {
+    position: unset;
+    top: 0;
+    left: 0;
+    transform: unset;
+    margin-bottom: -8px;
+  }
+
+  .__logo {
+    margin-top: 30px;
+  }
+
+  .tip__card {
+    flex-direction: column;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .__calculator,
+  .result__card {
+    width: 100%;
+  }
+
+  .__calculator {
+    align-items: stretch;
+    gap: 25px;
+  }
+}
