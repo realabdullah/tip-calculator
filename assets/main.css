@@ -116,7 +116,7 @@ input[type='radio'] {
   border: none;
   border-radius: 5px;
   outline: none;
-  font-size: .6rem;
+  font-size: 1rem;
   font-weight: 700;
   background: hsl(189, 41%, 97%);
   color: hsl(184, 14%, 56%);
