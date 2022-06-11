@@ -84,35 +84,37 @@ body {
 .__percentages .__percentage {
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-start;
   gap: 10px;
+  padding-top: 10px;
 }
 
-.__percentage label:not(:last-child) {
+.__percentage input {
   width: 70px;
-  padding: 5px 10px;
+  margin: 20px;
+}
+
+input[type='radio']:before {
+  content: attr(label);
+  width: 70px;
+  padding: 10px 25px;
   text-align: center;
   background: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
   border-radius: 5px;
+  font-family: 'Space Mono', monospace;
   font-size: .8rem;
-  /* margin-top: 10px; */
 }
 
-.__percentage label:not(:last-child):hover {
+input[type='radio']:hover::before {
   background: hsl(186, 14%, 43%);
   cursor: pointer;
 }
 
-.__percentage label span {
-  color: hsl(0, 0%, 100%);
-}
-
-input[type='radio'] {
-  display: none;
-}
-
-.custom__percentage input {
+.custom__percentage {
   width: 70px;
-  padding: 8px 10px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   outline: none;
@@ -121,6 +123,10 @@ input[type='radio'] {
   background: hsl(189, 41%, 97%);
   color: hsl(184, 14%, 56%);
   text-align: center;
+}
+
+.custom__percentage::placeholder {
+  font-size: .7rem;
 }
 
 .__people label {
