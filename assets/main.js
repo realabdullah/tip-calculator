@@ -34,4 +34,5 @@ document.getElementById('reset').onclick = function () {
   document.querySelector('#people').value = ''
   document.querySelector('.tip__amount').innerHTML = '$0.00'
   document.querySelector('.total__amount').innerHTML = '$0.00'
+  document.querySelector('.custom__percentage').value = ''
 }
