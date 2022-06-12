@@ -6,9 +6,15 @@ document.getElementById('people').addEventListener('keyup', function (event) {
 
     let tipPercents = document.getElementsByName('tip-percent')
 
-    var selectedPercent = Array.from(tipPercents).find(percent => percent.checked)
+    let customTipPercent = document.querySelector('.custom__percentage').value
+    
+    if (customTipPercent == '') {
+      var selectedPercent = Array.from(tipPercents).find(percent => percent.checked).value
+    } else {
+      var selectedPercent = customTipPercent
+    }
 
-    let tip = 1 + (selectedPercent.value / 100)
+    let tip = 1 + (selectedPercent / 100)
     let totalTip = bill * tip
 
     let totalPerPerson = totalTip / people
